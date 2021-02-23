@@ -1,19 +1,60 @@
+@font-face {
+    font-family: 'TTTogether';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/TTTogetherA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SangSangAnt';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_three@1.0/SangSangAnt.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     background-color: #4a8fdf;
+    
 }
 
 h1 {
-    color : #34495e;
+    color : #2e2e2e;
+    font-family: 'TTTogether';
+    font-weight: normal;
+    font-size: 150px;
+    margin : 0;
 }
 
 .form, .greetings {
     display: none;
+    font-size: 80px;
+    color:#535353;
+    margin: 0;
+    font-family: 'SangSangAnt';
+    font-weight: normal;
+
+}
+
+.form {
+    width : 300px;
+    padding:10px;
 }
 
 .showing {
     display : block;
 }
 
+.content {
+    position : absolute;
+    top : 0;
+    left : 0;
+    width : 100%;
+    height: 100%;
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 @keyframes fadeIn {
     from {
         opacity : 0;
@@ -30,4 +71,32 @@ h1 {
     height:100%;
     z-index:-1;
     animation: fadeIn 0.5s linear;
+}
+
+.js-toDoForm {
+    width : 300px;
+}
+
+input {
+    width : 100%;
+    padding : 10px;
+    font-size : 20px;
+    border:0;
+    outline: 0;
+    box-shadow: none;
+    border-radius: 10px;
+}
+
+input:focus::placeholder {
+    color : transparent;
+}
+
+.js-weather {
+    position : absolute;
+    top :20px;
+    right:50px;
+    color : #c2c2c2;
+    font-size : 20px;
+    font-family : 'TTTogether';
+    text-shadow: 2px 2px 2px #131313;
 }
